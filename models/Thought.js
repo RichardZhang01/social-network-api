@@ -4,7 +4,6 @@ const reactionSchema = require('./Reaction');
 
 const thoughtSchema = new Schema(
   {
-
     thoughtText: {
         type: String,
         required: [
@@ -20,7 +19,7 @@ const thoughtSchema = new Schema(
     createdAt: {
         type: Date,
         default: Date.now,
-        get: (date) => moment(date).format('MMM Do, YYYY [at] hh:mm A')
+        get: (date) => moment(date).format('MMM Do, YYYY [at] hh:mm a')
     },
     username: {
         type: String,
@@ -30,19 +29,15 @@ const thoughtSchema = new Schema(
       ]
     },
     reactions: [ reactionSchema ]
-
   },
 
   {
-
     toJSON: {
       virtuals: true,
       getters: true
     },
     id: false
-
   }
-
 );
 
 userSchema

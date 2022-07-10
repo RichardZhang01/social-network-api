@@ -3,7 +3,6 @@ const { isEmail } = require('validator');
 
 const userSchema = new Schema(
   {
-
     username: {
         type: String,
         unique: true,
@@ -37,18 +36,14 @@ const userSchema = new Schema(
         ref: 'user'
       }
     ]
-
   },
 
   {
-
     toJSON: {
       virtuals: true,
     },
     id: false,
-
   }
-
 );
 
 userSchema

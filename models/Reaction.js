@@ -15,7 +15,7 @@ const reactionSchema = new Schema(
         ],
         maxLength: [
           280,
-          'Reaction must be less than or equal to 280 characters. Your reaction was {VALUE} characters long.'
+          'Reaction must be less than or equal to 280 characters.'
         ]
     },
     username: {

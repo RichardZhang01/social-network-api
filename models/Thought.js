@@ -13,7 +13,7 @@ const thoughtSchema = new Schema(
         minLength: 1,
         maxLength: [
           280,
-          'Thought must be less than or equal to 280 characters. Your thought was {VALUE} characters long.'
+          'Thought must be less than or equal to 280 characters.'
         ]
     },
     createdAt: {
@@ -40,7 +40,7 @@ const thoughtSchema = new Schema(
   }
 );
 
-userSchema
+thoughtSchema
   .virtual('reactionCount')
   .get(function () {
     return this.reactions.length;   

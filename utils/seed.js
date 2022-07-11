@@ -81,7 +81,6 @@ connection.once('open', async () => {
             .project({ _id: 1 }).toArray();
 
             friendList.push(friendData[0]._id);
-            console.log(friendList);
         }
 
         await User.collection

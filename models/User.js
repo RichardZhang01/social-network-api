@@ -7,21 +7,21 @@ const userSchema = new Schema(
       type: String,
       unique: true,
       required: [
-          true,
-          'Please enter a username'
+        true,
+        'Please enter a username'
       ],
       trim: true
     },
     email: {
       type: String,
       unique: true,
-      required: [ 
-          true,
-          'Please enter an email address'
+      required: [
+        true,
+        'Please enter an email address'
       ],
       validate: [
-          isEmail,
-          'Please enter a valid email address'
+        isEmail,
+        'Please enter a valid email address'
       ]
     },
     thoughts: [
@@ -49,7 +49,7 @@ const userSchema = new Schema(
 userSchema
   .virtual('friendCount')
   .get(function () {
-    return this.friends.length;    
+    return this.friends.length;
   });
 
 const User = model('user', userSchema);

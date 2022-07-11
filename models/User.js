@@ -4,25 +4,25 @@ const { isEmail } = require('validator');
 const userSchema = new Schema(
   {
     username: {
-        type: String,
-        unique: true,
-        required: [
-            true,
-            'Please enter a username'
-        ],
-        trim: true
+      type: String,
+      unique: true,
+      required: [
+          true,
+          'Please enter a username'
+      ],
+      trim: true
     },
     email: {
-        type: String,
-        unique: true,
-        required: [ 
-            true,
-            'Please enter an email address'
-        ],
-        validate: [
-            isEmail,
-            'Please enter a valid email address'
-        ]
+      type: String,
+      unique: true,
+      required: [ 
+          true,
+          'Please enter an email address'
+      ],
+      validate: [
+          isEmail,
+          'Please enter a valid email address'
+      ]
     },
     thoughts: [
       {

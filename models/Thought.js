@@ -17,15 +17,15 @@ const thoughtSchema = new Schema(
         ]
     },
     createdAt: {
-        type: Date,
-        default: Date.now,
-        get: (date) => moment(date).format('MMM Do, YYYY [at] hh:mm a')
+      type: Date,
+      default: Date.now,
+      get: (date) => moment(date).format('MMM Do, YYYY [at] hh:mm a')
     },
     username: {
-        type: String,
-        required: [
-          true,
-          'There must be a username associated with this thought.'
+      type: String,
+      required: [
+        true,
+        'There must be a username associated with this thought.'
       ]
     },
     reactions: [ reactionSchema ]
